@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phương trinh bac hai</title>
+</head>
+<body>
+<form>
+    A <input type="number" id="o1"/></br>
+    B <input type="number" id="o2"/></br>
+    C <input type="number" id="o3"/></br>
+    <div id="demo"></div>
+    </br>
+    <button type="button" onclick="show();">click</button>
+</form>
+<script>
+    function show(){
+        let a = parseFloat(document.getElementById('o1').value);
+        let b = parseFloat(document.getElementById('o2').value);
+        let c = parseFloat(document.getElementById('o3').value);
+        let t = b*b - 4*a*c ;
+        if (t == 0)
+            document.getElementById('demo').innerHTML = -b/(2*a);
+        else if (t < 0)
+            document.getElementById('demo').innerHTML = 'phương trình vô nghiệm';
+        else (t > 0)
+        document.getElementById('demo').innerHTML = (-b+ sqrt(t))/2 && (-b - sqrt(t))/2;
+    }
+</script>
+</body>
+</html>
