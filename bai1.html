@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi độ C</title>
+</head>
+<body>
+<form>
+  độ C <input type="number" id="o1"/></br>
+  độ F <input type="number" id="o2"/></br>
+  <button type="button" onclick="show();">click</button>
+</form>
+<script>
+  function show(){
+    let a = parseFloat(document.getElementById('o1').value)
+    let b = ( a * 1.8) + 32 ;
+    document.getElementById('o2').value = b ;
+  }
+</script>
+
+</body>
+</html>
