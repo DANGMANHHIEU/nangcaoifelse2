@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phương trình bậc nhất</title>
+</head>
+<body>
+<form>
+    <input type="number" id="o1"/></br>
+    <input type="number" id="o2"/></br>
+    <div id="demo"></div></br>
+    <button type="button" onclick="show();">click</button>
+</form>
+<script>
+    function show() {
+        let a = parseFloat(document.getElementById('o1').value);
+        let b = parseFloat(document.getElementById('o2').value);
+        let x = -b/a ;
+        if ( a == 0 && b == 0){
+            document.getElementById('demo').innerHTML ='phương trình vô số nghiệm';
+        }
+        else if (a !=0 && b ==0){
+            document.getElementById('demo').innerHTML ='x = 0';
+        }
+        else if (a ==0 && b != 0){
+            document.getElementById('demo').innerHTML = 'phương trình vô nghiệm';
+        }
+        else
+            document.getElementById('demo').innerHTML = x
+
+    }
+
+</script>
+
+</body>
+</html>
